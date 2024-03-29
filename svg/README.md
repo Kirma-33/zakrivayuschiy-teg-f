@@ -1,1 +1,3 @@
-В этой папке будут храниться все необходимые SVG-файлы для сайта.
+# ALT-**ЗАКРЫВАЮЩИЙСЯ ТЕГ**
+## By Kirma-33 учебный проект 
+https://github.com/Kirma-33/zakrivayuschiy-teg-f.git
