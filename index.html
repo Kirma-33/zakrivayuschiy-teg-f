@@ -560,22 +560,24 @@
         <span class="button__text">Сохранить на память</span>
       </button>
 
-      <dialog id="dialog-id" class="dialog">
-        <div class="dialog__content">
-          <svg class="floppy-d" width="39" height="39" viewBox="0 0 39 39">
-            <use href="./svg/dialog-floppy.svg#floppy-d"></use>
-          </svg>
-          <span class="dialog__text"
-            >Вставьте<br />дискету, чтобы продолжить</span
+      <dialog id="dialog-id" class="dialog" >
+        <form class="dialog-container" method="dialog">
+          <div class="dialog__content">
+            <svg class="floppy-d" width="39" height="39" viewBox="0 0 39 39">
+              <use href="./svg/dialog-floppy.svg#floppy-d"></use>
+            </svg>
+            <span class="dialog__text"
+              >Вставьте<br />дискету, чтобы продолжить</span
+            >
+          </div>
+          <button
+            class="dialog__button button"
+            type="button"
+            onclick="window['dialog-id'].close()"
           >
-        </div>
-        <button
-          class="dialog__button button"
-          type="button"
-          onclick="window['dialog-id'].close()"
-        >
-          <span class="button__text">Ок</span>
-        </button>
+            <span class="button__text">Ок</span>
+          </button>
+        </form>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>

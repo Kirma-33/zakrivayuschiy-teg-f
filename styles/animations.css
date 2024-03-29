@@ -31,10 +31,6 @@
   padding: 0;
 }
 
-.like-icon {
-  padding: 0;
-}
-
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear;
