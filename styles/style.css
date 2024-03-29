@@ -120,6 +120,7 @@ button:hover::after {
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--weight-title), var(--weight-text);
 }
 
 .content {
@@ -309,6 +310,7 @@ button:hover::after {
   padding: 4px 8px 3px;
   font-family: var(--font-inter);
   font-size: var(--title-size);
+  font-variation-settings: 'wght' var(--weight-title)
 }
 
 .card__img-container {
@@ -322,7 +324,7 @@ button:hover::after {
 
 .card__text {
   font-family: var(--font-inter);
-  font-weight: var(--weight-text);
+  font-variation-settings: 'wght' var(--weight-text);   
   font-size: var(--text-size);
 }
 
@@ -330,7 +332,7 @@ button:hover::after {
   position: absolute;
   opacity: 50%;
   font-family: var(--font-ps2p);
-  font-weight: var(--weight-h1);
+  font-variation-settings: 'wght' var(--weight-h1);
   font-size: var(---lebel-size);
   text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
     1px 0 var(--bg-color), 0 -1px var(--bg-color);
