@@ -85,12 +85,25 @@
 
 .like-icon.is-liked .heart {
   transform-origin:center;
- animation: scale 0.6s ease-in 0.1s 1 alternate;
+ -webkit-animation: scale 0.6s ease-in 0.1s 1 alternate;
+         animation: scale 0.6s ease-in 0.1s 1 alternate;
 }
 
 .like-icon.is-liked .sparks {
   animation: opacity 0.3s ease-in 0.3s 1 alternate-reverse;
 }
+
+
+
+@-webkit-keyframes pointer {
+    0% {
+      left: 0;
+    }
+  
+    100% {
+      left: 4px;
+    }
+  }
 
 
 
@@ -104,6 +117,16 @@
     }
   }
 
+  @-webkit-keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
   @keyframes scale {
     0% {
       transform: scale(1);
@@ -111,6 +134,16 @@
   
     100% {
       transform: scale(1.5);
+    }
+  } 
+
+  @-webkit-keyframes opacity {
+    0% {
+      opacity:0;
+    }
+  
+    100% {
+      opacity:1;
     }
   } 
 

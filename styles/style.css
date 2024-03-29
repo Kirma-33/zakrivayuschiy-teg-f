@@ -14,7 +14,6 @@
 
 */
 
-
 /* Вспомогательные селекторы и кнопки начало */
 
 .frame-decor {
@@ -42,15 +41,15 @@
 .button::after {
   content: "";
   position: absolute;
-  inset-block-start: 0px;
-  inset-inline-start: 0px;
   z-index: -1;
   display: block;
-  inline-size: 100%;
-  block-size: 100%;
   background-color: var(--accent-color);
   transition: transform 0.5s ease;
   transform: translateX(-100%);
+  inset-block-start: 0px;
+  inset-inline-start: 0px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 button:hover::after {
@@ -60,7 +59,8 @@ button:hover::after {
 
 .button__text {
   position: relative;
-  padding-block-start: 10px;
+  -webkit-padding-before: 10px;
+          padding-block-start: 10px;
   color: var(--but-color);
   font-family: var(--font-ps2p);
   font-size: var(--button-size);
@@ -72,7 +72,6 @@ button:hover::after {
   color: var(--but-color);
   mix-blend-mode: difference;
 }
-
 
 .card__icon-button {
   height: 38px;
@@ -108,7 +107,6 @@ button:hover::after {
   padding: 10px 120px;
 }
 
-
 /* общие классы, и кнопки. конец */
 
 .page {
@@ -141,7 +139,8 @@ button:hover::after {
   row-gap: 21.5px;
   margin: 0 auto;
   margin-block: 100px 104px;
-  padding-block-end: 20px;
+  -webkit-padding-after: 20px;
+          padding-block-end: 20px;
   font-family: var(--font-ps2p);
   text-align: center;
   text-transform: uppercase;
@@ -151,7 +150,8 @@ button:hover::after {
 }
 
 .title {
-  padding-block-start: 9px;
+  -webkit-padding-before: 9px;
+          padding-block-start: 9px;
   font-weight: var(--weight-h1);
   font-size: var(--h1-font-size);
 }
@@ -191,11 +191,12 @@ button:hover::after {
 .theme-menu__button[disabled]::before {
   content: "▶";
   position: absolute;
-  inset-block-start: 1;
-  inset-inline-start: 1;
   color: currentColor;
   animation: pointer 0.3s infinite ease alternate-reverse;
-  animation-name: pointer;
+  -webkit-animation-name: pointer;
+          animation-name: pointer;
+  inset-block-start: 1;
+  inset-inline-start: 1;
   inset-inline-start: 1%;
 }
 
@@ -221,13 +222,13 @@ button:hover::after {
 .theme-menu__button::after {
   content: "";
   position: absolute;
-  inset-block-start: 110%;
-  inset-inline-start: 15%;
   display: block;
-  block-size: 2px;
   overflow: hidden;
   background-color: var(--accent-color);
   transition: inline-size 0.6s;
+  inset-block-start: 110%;
+  inset-inline-start: 15%;
+  block-size: 2px;
   inline-size: 0%;
 }
 
@@ -245,45 +246,55 @@ button:hover::after {
 }
 
 .card:nth-child(2) .image {
-  filter: saturate(0.3);
+  -webkit-filter: saturate(0.3);
+          filter: saturate(0.3);
 }
 
 .card:nth-child(3) .image {
-  filter: brightness(2);
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
 }
 
 .card:nth-child(4) .image {
-  filter: hue-rotate(45deg);
+  -webkit-filter: hue-rotate(45deg);
+          filter: hue-rotate(45deg);
 }
 
 .card:nth-child(5) .image {
-  filter: invert(0.6);
-
+  -webkit-filter: invert(0.6);
+          filter: invert(0.6);
 }
 
 .card:nth-child(6) .image {
-  filter: saturate(0.3);
+  -webkit-filter: saturate(0.3);
+          filter: saturate(0.3);
 }
 
 .card:nth-child(7) .image {
-  filter: blur(10px);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
 }
 
 .card:nth-child(8) .image {
-  filter: contrast(20%);
-  
+  -webkit-filter: contrast(20%);
+          filter: contrast(20%);
 }
 .card:last-child {
-  padding-block-end: 15px;
+  -webkit-padding-after: 15px;
+          padding-block-end: 15px;
 }
 
 .card:not(:last-child) {
-  margin-block-end: 48px;
-  padding-block-end: 20px;
+  -webkit-margin-after: 48px;
+          margin-block-end: 48px;
+  -webkit-padding-after: 20px;
+          padding-block-end: 20px;
 }
 .card:last-child {
-  margin-block-start: 5px;
-  padding-block-end: 15px;
+  -webkit-margin-before: 5px;
+          margin-block-start: 5px;
+  -webkit-padding-after: 15px;
+          padding-block-end: 15px;
 }
 
 .card__content {
@@ -328,7 +339,10 @@ button:hover::after {
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports (
+  (text-stroke: 1px var(--bg-color)) or
+    (-webkit-text-stroke: 1px var(--bg-color))
+) {
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color);
@@ -338,9 +352,11 @@ button:hover::after {
 .card__button-container {
   display: flex;
   justify-content: end;
-  column-gap: 3px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
   padding: 7px 24px;
-  filter:saturate(1) ;
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
 }
 
 /* DIALOG-НАЧАЛО */
@@ -353,6 +369,9 @@ button:hover::after {
   line-height: 21px;
   background-color: var(--bg-color);
   inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+}
+.dialog::-webkit-backdrop {
+  background-color: rgb(0 0 0 / 0.6);
 }
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.6);
@@ -368,7 +387,8 @@ button:hover::after {
   align-items: center;
   gap: 20px;
   border: none;
-  padding-inline-start: 25px;
+  -webkit-padding-start: 25px;
+          padding-inline-start: 25px;
   text-transform: uppercase;
 }
 
@@ -379,11 +399,11 @@ button:hover::after {
 
   .theme-menu__list {
     row-gap: 3px;
-   
   }
 
   .card:not(:last-child) {
-    padding-block-end: 19px;
+    -webkit-padding-after: 19px;
+            padding-block-end: 19px;
   }
 
   .card__content {
@@ -404,7 +424,9 @@ button:hover::after {
   }
 
   .button__text {
-    margin-inline-end: 8px;
-    padding-block-start: 0;
+    -webkit-margin-end: 8px;
+            margin-inline-end: 8px;
+    -webkit-padding-before: 0;
+            padding-block-start: 0;
   }
 }
