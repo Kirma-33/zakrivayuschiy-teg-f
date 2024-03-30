@@ -407,8 +407,8 @@ button:hover::after {
   align-items: center;
   gap: 20px;
   border: none;
-  -webkit-padding-start: 25px;
-          padding-inline-start: 25px;
+  -webkit-padding-inline: 20px;
+  padding-inline: 20px;
   text-transform: uppercase;
 }
 
