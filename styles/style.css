@@ -112,7 +112,7 @@ button:hover::after {
 }
 
 .dialog__button {
-  margin: 30px 20px;
+  margin: 30px 20px 15px;
   padding: 10px 120px;
 }
 
@@ -401,6 +401,9 @@ button:hover::after {
   flex-shrink: 0;
 }
 
+.dialog-container {
+  padding-block-start: 10px;
+}
 .dialog__content {
   display: flex;
   flex-direction: row;
