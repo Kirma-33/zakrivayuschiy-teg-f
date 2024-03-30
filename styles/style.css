@@ -156,10 +156,7 @@ button:hover::after {
   color: var(--accent-color);
   font-family: var(--font-PS2P), sans-serif, Arial, Helvetica; 
   text-align: center; 
-  -webkit-padding-before: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);   
-          font-family: var(--font-spec), sans-serif, Arial, Helvetica;
-          
-          
+  -webkit-padding-before: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);         
         }
 
 .title {
