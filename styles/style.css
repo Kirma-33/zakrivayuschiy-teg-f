@@ -80,6 +80,7 @@ button:hover::after {
   color: var(--accent-color);
   background-color: transparent;
   cursor: pointer;
+  transition: border 0.3s ease;
   
 }
 
@@ -89,7 +90,7 @@ button:hover::after {
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-  transition: border 0.3s ease;
+ 
 }
 
 .card__like-button {
@@ -133,7 +134,6 @@ button:hover::after {
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  padding-block-start: 100px;
   font-variation-settings: 'wght' var(--weight-title), var(--weight-text);
 }
 
@@ -151,11 +151,12 @@ button:hover::after {
   flex-direction: column; 
   inline-size: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
   padding-block-start: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
-  margin-block-end: 100px;
+  margin:100px auto;
   padding-block-end: 25px;    
   color: var(--accent-color);
-  font-family: var(--font-PS2P), sans-serif, Arial, Helvetica; 
+  font-family: var(--font-spec), sans-serif, Arial, Helvetica; 
   text-align: center; 
+  justify-content: center;
   -webkit-padding-before: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);         
         }
 
@@ -205,6 +206,7 @@ button:hover::after {
   font-size: var(--button-size);
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button[disabled] {
@@ -230,7 +232,6 @@ button:hover::after {
 .theme-menu__button:hover {
   opacity: 0.6;
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
@@ -262,6 +263,8 @@ button:hover::after {
 
 /* ---HEADER КОНЕЦ--- */
 
+
+
 /* ---CARDS НАЧАЛО--- */
 
 .cards {
@@ -269,34 +272,38 @@ button:hover::after {
   inline-size: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
 }
 
+.card {
+  margin: 0 auto;
+}
+
 .saturate {
   -webkit-filter: saturate(0.3);
-          filter: saturate(0.3);
+          filter: saturate(0.3) sepia(1) contrast(2) brightness(200%);;
 }
 
 .brightness {
   -webkit-filter: brightness(2);
-          filter: brightness(2);
+          filter: saturate(0.3) contrast(2) brightness(2);
 }
 
 .rotate {
   -webkit-filter: hue-rotate(45deg);
-          filter: hue-rotate(45deg);
+          filter:hue-rotate(45deg) saturate(0.3) contrast(2) brightness(2);
 }
 
 .invert {
   -webkit-filter: invert(0.6);
-          filter: invert(0.6);
+  filter: invert(1) brightness(200%) saturate(60%)hue-rotate(90deg) ;
 }
 
 
 .blur {
-  -webkit-filter: blur(10px);
+  -webkit-filter: blur(10px)hue-rotate(90deg);
           filter: blur(10px);
 }
 
 .contrast {
-  -webkit-filter: contrast(20%);
+  -webkit-filter: contrast(20%) brightness(200%) saturate(60%);
           filter: contrast(20%);
 }
 .card:last-child {
@@ -424,26 +431,26 @@ button:hover::after {
   }
 
   .card__content {
-    padding: 20px 24px;
+    padding: 20.3px 24px;
   }
 
   .card__label {
-    inset-block-start: 4%;
-    inset-inline-end: 2%;
+    inset-block-start: 27px;
+    inset-inline-end: 23px;
   }
 
   .button-save {
     flex-direction: row;
-    gap: 10px;
-    margin: 52px 35px 100px;
-    padding: 11px 12px;
+    gap: 4px;
+    margin: 46px 35px 100px;
+    padding: 12px 19px;
     line-height: 12.6px;
   }
 
-  .button__text {
+  /* .button__text {
     -webkit-margin-end: 8px;
             margin-inline-end: 8px;
     -webkit-padding-before: 0;
             padding-block-start: 0;
-  }
+  } */
 }
